@@ -19,7 +19,11 @@ st.set_page_config(
 # --------------------
 # SES MOTORU
 # --------------------
-engine = pyttsx3.init()
+try:
+    import pyttsx3
+    engine = pyttsx3.init()
+except Exception as e:
+    engine = None
 
 def konus(metin):
     try:
